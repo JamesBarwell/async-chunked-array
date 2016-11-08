@@ -32,6 +32,29 @@ describe('module', () => {
         })
     })
 
+    describe('map', () => {
+        let actual = []
+        let expected = []
+
+        beforeEach((done) => {
+            const longArray = range(0, 10)
+            const transform = function(item) {
+                return item * 2
+            }
+
+            expected = cloneArray(longArray).map(transform)
+
+            arrayHelper.map(longArray, 1000, transform, (err, transformed) => {
+                actual = transformed
+                done()
+            })
+        })
+
+        it('runs a function on each array item', () => {
+            assert.deepEqual(actual, expected)
+        })
+    })
+
     describe('sort', () => {
         let actual
         let expected

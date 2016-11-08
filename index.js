@@ -2,6 +2,7 @@
 
 module.exports = {
     each: each,
+    map: map,
     sort: sort
 }
 
@@ -11,6 +12,26 @@ function each(collection, chunkLength, operation, done) {
 
         for (let i = startIndex; i < limit && i < collection.length; i++) {
             operation(collection[i])
+        }
+
+        if (limit > collection.length) {
+            return doneChunk(null, collection)
+        } else {
+            setImmediate(() => {
+                actOnRange(limit, done)
+            })
+        }
+    }
+
+    actOnRange(0, done)
+}
+
+function map(collection, chunkLength, operation, done) {
+    function actOnRange(startIndex, doneChunk) {
+        let limit = startIndex + chunkLength
+
+        for (let i = startIndex; i < limit && i < collection.length; i++) {
+            collection[i] = operation(collection[i])
         }
 
         if (limit > collection.length) {
