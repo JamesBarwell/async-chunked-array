@@ -1,7 +1,7 @@
 {
   "name": "async-chunked-array",
   "version": "1.0.0",
-  "description": "Helpers for performing asynchronous operations on arrays",
+  "description": "Helpers for performing asynchronous operations on large arrays",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
