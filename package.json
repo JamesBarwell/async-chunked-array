@@ -1,6 +1,6 @@
 {
   "name": "async-chunked-array",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Helpers for performing asynchronous operations on large arrays",
   "main": "index.js",
   "scripts": {
