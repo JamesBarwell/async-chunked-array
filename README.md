@@ -1,6 +1,9 @@
 async-chunked-array
 ---
 
+[![Build Status](https://travis-ci.org/JamesBarwell/async-chunked-array.svg?branch=master)](https://travis-ci.org/JamesBarwell/async-chunked-array)
+[![NPM version](https://badge.fury.io/js/async-chunked-array.svg)](http://badge.fury.io/js/async-chunked-array)
+
 Helper for performing asynchronous operations on arrays. This module is intended to allow CPU intensive array operations without blocking the event loop.
 
 ## How to use
