@@ -1,12 +1,12 @@
 'use strict'
 
 module.exports = {
-    each: each,
+    forEach: forEach,
     map: map,
     sort: sort
 }
 
-function each(collection, chunkLength, operation, done) {
+function forEach(collection, chunkLength, operation, done) {
     function actOnRange(startIndex, doneChunk) {
         let limit = startIndex + chunkLength
 

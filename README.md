@@ -8,6 +8,10 @@ Helper for performing asynchronous operations on arrays. This module is intended
 
 ## How to use
 
+```
+npm install --save async-chunked-array
+```
+
 Each method takes the following parameters:
 * collection - the array to operate on.
 * chunkLength - how many array items to operate on before breaking and allowing the event loop to become free.
@@ -21,7 +25,7 @@ const arrayHelper = require('async-chunked-array')
 
 let longArray = [ ... some long array ... ]
 
-arrayHelper.each(longArray, 1000, (item) => {
+arrayHelper.forEach(longArray, 1000, (item) => {
     // do something with item
 }, (err) => {
     if (err) { throw err }

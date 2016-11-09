@@ -5,7 +5,7 @@ const arrayHelper = require('../index')
 
 describe('module', () => {
 
-    describe('each', () => {
+    describe('forEach', () => {
         let actual = []
         let expected = []
 
@@ -24,7 +24,7 @@ describe('module', () => {
 
             cloneArray(longArray).forEach(transformExpected)
 
-            arrayHelper.each(longArray, 1000, transformActual, done)
+            arrayHelper.forEach(longArray, 1000, transformActual, done)
         })
 
         it('runs a function on each array item', () => {
